@@ -19,3 +19,4 @@ use Illuminate\Http\Request;
 
 Route::post('register','Api\RegisterController@register');
 Route::post('login','Api\LoginController@index');
+Route::middleware('auth:api')-> post('logout','Api\LoginController@logout');
